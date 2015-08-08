@@ -3,7 +3,9 @@ from pony.orm import *
 
 app = Flask(__name__)
 
-db = Database('mysql', user='db_user', passwd='db_passwd', db='comics', host='localhost')
+db = Database('mysql', user='root', passwd='', db='comics', host='localhost')
+
+from model import *
 
 @app.route('/')
 def hello_world():

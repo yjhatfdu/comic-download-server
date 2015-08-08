@@ -11,7 +11,7 @@ class ItemState:
 
 
 class Item(db.Entity):
-    title = Required(str)
+    title = Required(str, unique=True)
     pub_time = Required(datetime, index=True)
     description = Optional(str)
     link = Optional(str)
